@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-user_input = input("Enter a number: ")
-number = int(user_input)
+import random
+number = random.randint(-10, 10)
 if number == 0:
    print(number, "is Zero")
 elif number < 0:
