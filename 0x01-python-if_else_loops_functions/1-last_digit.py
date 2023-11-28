@@ -3,14 +3,18 @@ import random
 
 number = random.randint(-10000, 10000)
 
-last_digit = abs(number) % 10
+# Extract the last digit of the random number
+# If the number is negative, use modulo -10 to get the last digit
+# If the number is non-negative, use modulo 10 to get the last digit
+if number < 0:
+    last_num = number % -10
+elif number >= 0:
+    last_num = number % 10
 
-print("Last digit of", number, "is", last_digit, end=" ")
-
-if last_digit > 5:
-    print("and is greater than 5")
-elif last_digit == 0:
-    print("and is 0")
+# Check conditions based on the value of the last digit
+if last_num > 5:
+    print(f"Last digit of {number} is {last_num} and is greater than 5")
+elif last_num == 0:
+    print(f"Last digit of {number} is {last_num} and is 0")
 else:
-    print("and is less than 6 and not 0")
-
+    print(f"Last digit of {number} is {last_num} and is less than 6 and not 0")
